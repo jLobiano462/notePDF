@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+
+
+<html lang = 'en'>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content = 'IE=edge'>
+    <meta name='viewport' content ='width = device-width, initial-scale = 1.0'>
+    <meta name = 'application-name'  content = 'pdfNotes'>
+    <meta name = 'author'  content = 'Jero Matthew T. Lobiano'>
+    <link rel ='stylesheet' href='main.css' type = 'text/css'>
+    <title>pdfNotes</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+
+
+    <header>
+      <div class ='container'>
+      <div>
+      <h1>pdfNotes</h1>
+      <sub>v1.0.0</sub>
+      </div>
+      <button class ='toggle'>
+        <span class ='icon'>
+          <ion-icon name="menu-outline"></ion-icon>
+        </span>
+      </button>
+      </div>
+    </header>
+
+    <div class='sidebar'>
+      <h3>My other projects</h3>
+      <ul class='nav-links'>
+        <li><span class ='icon'>
+          <ion-icon name="home-outline"></ion-icon>
+        </span>
+
+          <a href=''>Home</a></li>
+        <li><span class ='icon'>
+          <ion-icon name="logo-github"></ion-icon>
+        </span><a href='https://github.com/jLobiano462'>Github Account
+        </a></li>
+        <li><span class ='icon'>
+          <ion-icon name="logo-github"></ion-icon>
+        </span><a href='https://github.com/jLobiano462/notePDF'>Github Repository
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+
+
+
+
+    <section class='input-section'>
+      <div class ='container inner'>
+        <div class ='split'>
+          <input id ='title' placeholder="Enter document title" type ='text'>
+          <div class='fs'>
+          <label for= 'font-size'><strong>Font-size:</strong></label>
+          <select id='font-size' name ='font-size'>
+            <option value ='10px'>10</option>
+            <option value ='12px'>12</option>
+            <option value = '14px'>14</option>
+            <option value = '16px' selected>16</option>
+            <option value ='18px'>18</option>
+            <option value ='20px'>20</option>
+          </select>
+          </div>
+
+          <div class='ff'>
+
+          <label for ='font-family'><strong>Font-family</strong></label>
+          <select id ='font-family' name ='font-family'>
+            <option value ='sans-serif' class ='sans-serif'>Sans-serif</option>
+            <option value = 'serif' class='serif' selected>Serif</option>
+            <option value = 'cursive' class= 'cursive'>Cursive</option>
+            <option value ='monospace' class ='monospace'>Monospace</option>
+            <option value = 'fantasy' class='fantasy'>Fantasy</option>
+          </select>
+
+          </div>
+
+        </div>
+
+        <textarea  id ='fileContent' style ='resize:none;' >
+
+        </textarea>
+
+
+        <div class ='button-container'>
+        <button id ='save' class ='save'>
+          Save
+          <span class ='icon'>
+            <ion-icon name="save-outline"></ion-icon>
+          </span>
+
+        </button>
+
+        <button id ='show' class ='showNote'>
+          Show Note
+          <span class ='icon'>
+            <ion-icon name="document-text-outline"></ion-icon>
+          </span>
+
+        </button>
+
+        <button id ='clear'>
+          Clear
+          <span class ='icon'>
+            <ion-icon name="trash-outline"></ion-icon>
+          </span>
+        </button>
+
+      </div>
+
+
+
+
+
+      </div>
+
+      <div class='modal'>
+        <div id ='texts-container'>
+
+
+        </div>
+        <button id ='download'>Download
+          <span class ='icon'>
+            <ion-icon name="download-outline"></ion-icon>
+          </span>
+        </button>
+        <button id ='close'>Close
+          <span class ='icon'>
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </span>
+
+        </button>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src='main.js' type ='module'></script>
+</body>
+
+</html>
